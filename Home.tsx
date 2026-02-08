@@ -31,12 +31,12 @@ const SectionTitle = ({ children, light = false }: { children?: React.ReactNode,
 const Navbar = () => (
   <nav className="fixed top-0 left-0 right-0 z-50 bg-[#1a1325]/90 backdrop-blur-md border-b border-white/10 px-6 py-4">
     <div className="max-w-7xl mx-auto flex justify-between items-center">
-      <div className="text-[#e91e63] font-bold text-xl">SM</div>
+      <Link to="/#hero" className="text-[#e91e63] font-bold text-xl cursor-pointer">SM</Link>
       <div className="flex gap-8 text-sm font-medium">
-        <a href="#hero" className="hover:text-[#e91e63] transition-colors cursor-pointer">Home</a>
-        <a href="#about" className="hover:text-[#e91e63] transition-colors cursor-pointer">About</a>
-        <a href="#featured-projects" className="hover:text-[#e91e63] transition-colors cursor-pointer">Projects</a>
-        <a href="#hackathons" className="hover:text-[#e91e63] transition-colors cursor-pointer">Hackathons</a>
+        <Link to="/#hero" className="hover:text-[#e91e63] transition-colors cursor-pointer">Home</Link>
+        <Link to="/#about" className="hover:text-[#e91e63] transition-colors cursor-pointer">About</Link>
+        <Link to="/#featured-projects" className="hover:text-[#e91e63] transition-colors cursor-pointer">Projects</Link>
+        <Link to="/#hackathons" className="hover:text-[#e91e63] transition-colors cursor-pointer">Hackathons</Link>
       </div>
     </div>
   </nav>
