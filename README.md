@@ -31,8 +31,9 @@ To host your portfolio on GitHub Pages, follow these steps:
    ```
 
 2. **Add Your GitHub Repository as Remote:**
+   *(Reminder: Your repository must be named exactly `Subitha-Murugesan.github.io` for this URL to work)*
    ```bash
-   git remote add origin https://github.com/Subitha-Murugesan/subitha-murugesan-portfolio.git
+   git remote add origin https://github.com/Subitha-Murugesan/Subitha-Murugesan.github.io.git
    ```
 
 3. **Deploy:**
@@ -45,5 +46,5 @@ To host your portfolio on GitHub Pages, follow these steps:
    - Go to **Settings** > **Pages**.
    - Ensure the source is set to **Deploy from a branch** and the branch is **gh-pages**.
 
-Your site will be available at `https://Subitha-Murugesan.github.io/subitha-murugesan-portfolio/`.
+Your site will be available at `https://Subitha-Murugesan.github.io/`.
 
