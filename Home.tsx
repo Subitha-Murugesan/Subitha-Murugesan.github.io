@@ -315,7 +315,7 @@ const Hackathons = () => (
           },
           {
             title: "Healthcare Hackathon Bayern 2025",
-            desc: "AWS Bedrock + RAG conversational AI prototype developed in a 5-day innovation sprint to make healthcare data accessible.",
+            desc: "AWS Bedrock + RAG conversational AI prototype developed in a 3-day innovation sprint to make healthcare data accessible.",
             img: "/assets/images/Hack4.png",
             link: "/hackathons/healthcare-bayern"
           }
