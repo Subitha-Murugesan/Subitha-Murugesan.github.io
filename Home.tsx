@@ -80,16 +80,7 @@ const Hero = () => (
             <ExternalLink size={18} className="text-[#e91e63]" />
           </Card>
         </a>
-        <a href="#" className="block group">
-          <Card className="flex items-center gap-4 hover:border-[#e91e63] transition-all">
-            <div className="p-3 bg-white/5 rounded-md text-[#e91e63]"><FileText size={20} /></div>
-            <div className="flex-1">
-              <h4 className="font-bold text-lg">Subitha Murugesan CV Portfolio</h4>
-              <p className="text-xs text-gray-400 line-clamp-2">AI Engineer Generative AI | Agentic AI | MLOPS | Data Science Master's Student in International Information Systems at FAU Erlangen Nuremberg...</p>
-            </div>
-            <ExternalLink size={18} className="text-[#e91e63]" />
-          </Card>
-        </a>
+
       </div>
 
       <div className="mt-12 flex flex-wrap gap-4">
