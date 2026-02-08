@@ -201,18 +201,18 @@ const ProjectHighlight = () => (
           <p className="text-gray-700 text-xl mb-12 flex-grow">
             Real-world Generative AI, Agentic AI, MCP, AWS cloud Solutions, MLOPS and Data Science projects showcasing production-ready implementations.
           </p>
-          <a href="#featured-projects" className="bg-[#60126a] text-white px-8 py-4 w-fit rounded-sm font-bold flex items-center gap-2 hover:bg-[#4a0e52] transition-colors">
+          <Link to="/#featured-projects" className="bg-[#60126a] text-white px-8 py-4 w-fit rounded-sm font-bold flex items-center gap-2 hover:bg-[#4a0e52] transition-colors">
             Explore Projects
-          </a>
+          </Link>
         </div>
         <div className="bg-white rounded-tr-[40px] rounded-bl-[40px] p-12 shadow-2xl flex flex-col h-full">
           <h2 className="text-4xl font-bold text-[#1a1325] mb-6">Hackathons</h2>
           <p className="text-gray-700 text-xl mb-12 flex-grow">
             Award-winning AI/ML solutions built through rapid prototyping and collaboration under tight timelines.
           </p>
-          <a href="#hackathons" className="bg-[#60126a] text-white px-8 py-4 w-fit rounded-sm font-bold flex items-center gap-2 hover:bg-[#4a0e52] transition-colors">
+          <Link to="/#hackathons" className="bg-[#60126a] text-white px-8 py-4 w-fit rounded-sm font-bold flex items-center gap-2 hover:bg-[#4a0e52] transition-colors">
             View Hackathons
-          </a>
+          </Link>
         </div>
       </div>
     </section>
