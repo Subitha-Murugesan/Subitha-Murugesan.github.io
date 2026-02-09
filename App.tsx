@@ -20,6 +20,7 @@ import FAUAIHackathon from './FAUAIHackathon';
 import EELISAGenAI from './EELISAGenAI';
 import SiemensHealthineers from './SiemensHealthineers';
 import HealthcareHackathon from './HealthcareHackathon';
+import Experience from './Experience';
 
 import ScrollToHash from './ScrollToHash';
 
@@ -29,6 +30,7 @@ function App() {
       <ScrollToHash />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/experience" element={<Experience />} />
         <Route path="/projects/campus-hub" element={<CampusHub />} />
         <Route path="/projects/ai-cofounder" element={<AiCofounder />} />
         <Route path="/projects/blog-genai" element={<BlogGenAI />} />

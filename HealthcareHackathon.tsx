@@ -37,7 +37,7 @@ const HealthcareHackathon = () => {
         <div className="min-h-screen bg-[#1a1325] text-white">
             {/* Navigation */}
             <nav className="fixed top-0 left-0 right-0 z-50 bg-[#1a1325]/90 backdrop-blur-md border-b border-white/10 px-6 py-4">
-                <div className="max-w-7xl mx-auto flex justify-between items-center">
+                <div className="max-w-6xl mx-auto flex justify-between items-center">
                     <Link to="/#hackathons" className="text-[#e91e63] font-bold text-xl flex items-center gap-2 hover:text-white transition-colors">
                         <ArrowLeft size={20} /> Back to Hackathons
                     </Link>
@@ -47,7 +47,7 @@ const HealthcareHackathon = () => {
 
             {/* Hero Section */}
             <header className="pt-32 pb-16 px-8 bg-gradient-to-b from-[#1a1325] to-[#2a223a]">
-                <div className="max-w-5xl mx-auto text-center">
+                <div className="max-w-6xl mx-auto text-center">
                     <div className="inline-flex items-center gap-2 bg-[#e91e63]/20 text-[#e91e63] px-4 py-2 rounded-full mb-6 font-bold">
                         <HeartPulse size={20} /> Digital Health Sprint
                     </div>
@@ -68,7 +68,7 @@ const HealthcareHackathon = () => {
                 {/* Gallery Section */}
                 <section className="mb-24 px-4">
                     <h3 className="text-2xl font-bold text-white mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">Hackathon Gallery</h3>
-                    <div className="flex justify-center mx-auto max-w-5xl">
+                    <div className="flex justify-center mx-auto max-w-6xl">
                         {galleryImages.map((img, idx) => (
                             <div
                                 key={idx}
@@ -163,7 +163,7 @@ const HealthcareHackathon = () => {
 
 const Footer = () => (
     <footer className="bg-[#1a1325] py-12 px-8 border-t border-white/5 mt-auto">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
             <div>
                 <h3 className="text-2xl font-bold text-[#e91e63] mb-2">Subitha Murugesan</h3>
                 <p className="text-gray-500">AI Engineer</p>

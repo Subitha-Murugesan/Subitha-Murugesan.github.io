@@ -11,7 +11,16 @@ import {
   Code,
   Layout,
   Lightbulb,
-  Cpu
+  Cpu,
+  Briefcase,
+  TrendingUp,
+  GraduationCap,
+  Heart,
+  Cloud,
+  Database,
+  Terminal,
+  Server,
+  Layers
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -30,13 +39,17 @@ const SectionTitle = ({ children, light = false }: { children?: React.ReactNode,
 
 const Navbar = () => (
   <nav className="fixed top-0 left-0 right-0 z-50 bg-[#1a1325]/90 backdrop-blur-md border-b border-white/10 px-6 py-4">
-    <div className="max-w-7xl mx-auto flex justify-between items-center">
-      <Link to="/#hero" className="text-[#e91e63] font-bold text-xl cursor-pointer">SM</Link>
+    <div className="max-w-8xl mx-auto flex justify-between items-center">
+      <Link to="/" className="text-[#e91e63] font-bold text-xl cursor-pointer">SM</Link>
       <div className="flex gap-8 text-sm font-medium">
-        <Link to="/#hero" className="hover:text-[#e91e63] transition-colors cursor-pointer">Home</Link>
+        <Link to="/" className="hover:text-[#e91e63] transition-colors cursor-pointer">Home</Link>
         <Link to="/#about" className="hover:text-[#e91e63] transition-colors cursor-pointer">About</Link>
+        <Link to="/#work-experience" className="hover:text-[#e91e63] transition-colors cursor-pointer">Work Experience</Link>
+        <Link to="/#skills" className="hover:text-[#e91e63] transition-colors cursor-pointer">Skills</Link>
         <Link to="/#featured-projects" className="hover:text-[#e91e63] transition-colors cursor-pointer">Projects</Link>
         <Link to="/#hackathons" className="hover:text-[#e91e63] transition-colors cursor-pointer">Hackathons</Link>
+        <Link to="/#education" className="hover:text-[#e91e63] transition-colors cursor-pointer">Education</Link>
+        <Link to="/#volunteer" className="hover:text-[#e91e63] transition-colors cursor-pointer">Volunteer</Link>
       </div>
     </div>
   </nav>
@@ -55,7 +68,7 @@ const Hero = () => (
       />
     </div>
     <div className="md:w-7/12 bg-[#1a1325] p-8 md:p-16 flex flex-col justify-center">
-      <h1 className="text-4xl md:text-6xl font-bold text-[#e91e63] mb-2 whitespace-nowrap">Subitha Murugesan</h1>
+      <h1 className="text-4xl md:text-6xl font-bold text-[#e91e63] mb-2">Subitha Murugesan</h1>
       <h2 className="text-3xl text-white font-semibold mb-6">AI Engineer</h2>
       <p className="text-xl text-gray-400 mb-12">Generative AI | Agentic AI | MLOPS | Data Science</p>
 
@@ -65,7 +78,7 @@ const Hero = () => (
             <div className="p-3 bg-white/5 rounded-md text-[#e91e63]"><Linkedin size={20} /></div>
             <div className="flex-1">
               <h4 className="font-bold text-lg">Subitha Murugesan LinkedIn</h4>
-              <p className="text-xs text-gray-400 line-clamp-2">Generative AI Engineer @ BMW Group | AI Engineer-Bosch | MLOps | AI-ML, NLP, Generative AI, Agentic AI, RAG, Graph RAG, MCP, AWS, LLMs | Data Science | Master’s in International Information Systems@FAU Erlangen-Nürnberg</p>
+              <p className="text-xs text-gray-400">Generative AI Engineer @ BMW Group | AI Engineer-Bosch | MLOps | AI-ML, NLP, Generative AI, Agentic AI, RAG, Graph RAG, MCP, AWS, LLMs | Data Science | Master’s in International Information Systems@FAU Erlangen-Nürnberg</p>
             </div>
             <ExternalLink size={18} className="text-[#e91e63]" />
           </Card>
@@ -75,7 +88,7 @@ const Hero = () => (
             <div className="p-3 bg-white/5 rounded-md text-[#e91e63]"><Github size={20} /></div>
             <div className="flex-1">
               <h4 className="font-bold text-lg">Subitha Murugesan Github</h4>
-              <p className="text-xs text-gray-400 line-clamp-2">Generative AI Engineer @ BMW Group | AI Engineer-Bosch | MLOps | AI-ML, NLP, Generative AI, Agentic AI, RAG, Graph RAG, MCP, AWS, LLMs | Data Science | Master’s in International Information Systems@FAU Erlangen-Nürnberg</p>
+              <p className="text-xs text-gray-400">Generative AI Engineer @ BMW Group | AI Engineer-Bosch | MLOps | AI-ML, NLP, Generative AI, Agentic AI, RAG, Graph RAG, MCP, AWS, LLMs | Data Science | Master’s in International Information Systems@FAU Erlangen-Nürnberg</p>
             </div>
             <ExternalLink size={18} className="text-[#e91e63]" />
           </Card>
@@ -153,23 +166,23 @@ const WhyPortfolio = () => (
         {[
           {
             icon: <Layout className="text-[#e91e63]" />,
-            title: "Comprehensive Showcase",
-            desc: "This is a comprehensive project portfolio showcasing Subitha's work in AI, Generative AI, Agentic AI, MCP, AWS cloud Solutions, MLOPS and Data Science."
+            title: "Professional Overview",
+            desc: "A comprehensive project portfolio highlighting my work across Generative AI, Agentic AI, MLOps, and Data Science, offering a complete view of my professional identity and a deeper look into my technical journey."
           },
           {
             icon: <Lightbulb className="text-[#e91e63]" />,
             title: "Diverse Projects",
-            desc: "Features real-world projects, hackathon submissions, and professional implementations."
+            desc: "A collection of real-world projects, hackathon submissions, and production-level implementations."
           },
           {
             icon: <Code className="text-[#e91e63]" />,
-            title: "Hands-On Expertise",
-            desc: "Demonstrates expertise through hands-on examples and GitHub repositories."
+            title: "Hands-On Skills",
+            desc: "Demonstrated through practical examples, end-to-end solutions, and active GitHub repositories."
           },
           {
             icon: <Cpu className="text-[#e91e63]" />,
             title: "Innovation Hub",
-            desc: "Serves as a central hub for exploring AI/ML innovations and technical capabilities."
+            desc: "A central space to explore AI/ML innovation, experimentation, and technical capabilities."
           }
         ].map((item, idx) => (
           <Card key={idx} className="p-10 border-white/10">
@@ -183,22 +196,31 @@ const WhyPortfolio = () => (
   </section>
 );
 
-const ProjectHighlight = () => (
+const ExploreSection = () => (
   <div id="projects" className="scroll-mt-20">
     <section className="bg-[#f8b4b4] py-24 px-8">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
-        <div className="bg-white rounded-tr-[40px] rounded-bl-[40px] p-12 shadow-2xl flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-[#1a1325] mb-6">Projects</h2>
-          <p className="text-gray-700 text-xl mb-12 flex-grow">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+        <div className="bg-white rounded-tr-[40px] rounded-bl-[40px] p-10 shadow-2xl flex flex-col h-full border-t-4 border-[#60126a]">
+          <h2 className="text-3xl font-bold text-[#1a1325] mb-6">Professional Experience</h2>
+          <p className="text-gray-700 text-lg mb-8 flex-grow">
+            Over 4 years of industry experience at leading companies like <b>BMW Group</b>, <b>Siemens Healthineers</b> and <b>Bosch</b>, specializing in Generative AI, Agentic AI, MLOps, and end-to-end AI pipelines.
+          </p>
+          <Link to="/#work-experience" className="bg-[#60126a] text-white px-8 py-4 w-fit rounded-sm font-bold flex items-center gap-2 hover:bg-[#4a0e52] transition-colors">
+            Explore Work Experience
+          </Link>
+        </div>
+        <div className="bg-white rounded-tr-[40px] rounded-bl-[40px] p-10 shadow-2xl flex flex-col h-full border-t-4 border-[#60126a]">
+          <h2 className="text-3xl font-bold text-[#1a1325] mb-6">Projects</h2>
+          <p className="text-gray-700 text-lg mb-8 flex-grow">
             Real-world Generative AI, Agentic AI, MCP, AWS cloud Solutions, MLOPS and Data Science projects showcasing production-ready implementations.
           </p>
           <Link to="/#featured-projects" className="bg-[#60126a] text-white px-8 py-4 w-fit rounded-sm font-bold flex items-center gap-2 hover:bg-[#4a0e52] transition-colors">
             Explore Projects
           </Link>
         </div>
-        <div className="bg-white rounded-tr-[40px] rounded-bl-[40px] p-12 shadow-2xl flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-[#1a1325] mb-6">Hackathons</h2>
-          <p className="text-gray-700 text-xl mb-12 flex-grow">
+        <div className="bg-white rounded-tr-[40px] rounded-bl-[40px] p-10 shadow-2xl flex flex-col h-full border-t-4 border-[#60126a]">
+          <h2 className="text-3xl font-bold text-[#1a1325] mb-6">Hackathons</h2>
+          <p className="text-gray-700 text-lg mb-8 flex-grow">
             Award-winning AI/ML solutions built through rapid prototyping and collaboration under tight timelines.
           </p>
           <Link to="/#hackathons" className="bg-[#60126a] text-white px-8 py-4 w-fit rounded-sm font-bold flex items-center gap-2 hover:bg-[#4a0e52] transition-colors">
@@ -207,89 +229,200 @@ const ProjectHighlight = () => (
         </div>
       </div>
     </section>
+  </div>
+);
 
-    <section id="featured-projects" className="bg-[#1a1325] py-24 px-8 scroll-mt-20">
-      <div className="max-w-7xl mx-auto">
-        <SectionTitle>Featured Projects</SectionTitle>
-        <p className="text-gray-400 text-xl mb-12">Explore a diverse collection of AI, Generative AI, Agentic AI, MCP, AWS cloud Solutions, MLOPS and Data Science projects showcasing real-world implementations and technical expertise.</p>
+const FeaturedProjects = () => (
+  <section id="featured-projects" className="bg-[#1a1325] py-24 px-8 border-t border-white/10 scroll-mt-20">
+    <div className="max-w-6xl mx-auto">
+      <SectionTitle>Featured Projects</SectionTitle>
+      <p className="text-gray-400 text-xl mb-12">Explore a diverse collection of AI, Generative AI, Agentic AI, MCP, AWS cloud Solutions, MLOPS and Data Science projects showcasing real-world implementations and technical skills.</p>
 
-        <div className="grid md:grid-cols-2 gap-12 mb-24">
-          {/* Project 1 */}
-          <div className="bg-white rounded-sm p-8 text-[#1a1325] flex flex-col">
-            <h3 className="text-2xl font-bold mb-6 border-b-2 border-[#e91e63] pb-2">Campus Hub - Your University Companion App</h3>
-            <div className="aspect-video bg-gray-100 mb-8 rounded-lg overflow-hidden shadow-inner">
-              {/* Replace with your image: /assets/images/campus-hub.jpg */}
-              <img src="/assets/images/campus hub.png" alt="Campus Hub" className="w-full h-full object-contain" />
-            </div>
-            <p className="text-lg mb-8 opacity-90">A comprehensive web application for students and staff at Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU) providing integrated access to campus life features.</p>
-            <ul className="grid grid-cols-2 gap-4 mb-8">
-              {["Library Management", "Classroom Navigation", "Course Timetables", "Cafeteria Occupancy", "Issue Reporting", "Digital Student ID", "Meeting Room Bookings", "AI Chatbot Assistant (Lara)"].map(item => (
-                <li key={item} className="flex items-center gap-2 text-sm font-semibold">
-                  <div className="w-1.5 h-1.5 bg-[#e91e63] rounded-full" /> {item}
-                </li>
-              ))}
-            </ul>
-            <Link to="/projects/campus-hub" className="mt-auto bg-[#e91e63] text-white px-6 py-3 font-bold w-fit rounded-sm hover:bg-[#c2185b]">View Details</Link>
+      <div className="grid md:grid-cols-2 gap-12 mb-24">
+        {/* Project 1 */}
+        <div className="bg-white rounded-sm p-8 text-[#1a1325] flex flex-col">
+          <h3 className="text-2xl font-bold mb-6 border-b-2 border-[#e91e63] pb-2">Campus Hub - Your University Companion App</h3>
+          <div className="aspect-video bg-gray-100 mb-8 rounded-lg overflow-hidden shadow-inner">
+            <img src="/assets/images/campus hub.png" alt="Campus Hub" className="w-full h-full object-contain" />
           </div>
-
-          {/* Project 2 */}
-          <div className="bg-white rounded-sm p-8 text-[#1a1325] flex flex-col">
-            <h3 className="text-2xl font-bold mb-6 border-b-2 border-[#e91e63] pb-2">AI Co-Founder Agent Web App</h3>
-            <div className="aspect-video bg-gray-100 mb-8 rounded-lg overflow-hidden shadow-inner">
-              {/* Replace with your image: /assets/images/ai-cofounder.jpg */}
-              <img src="/assets/images/AIco1.png" alt="AI Co-Founder" className="w-full h-full object-contain" />
-            </div>
-            <p className="text-lg mb-8 opacity-90">A comprehensive web application for analyzing and validating business ideas with AI-powered insights. Built with React, TypeScript, and Vite.</p>
-            <ul className="grid grid-cols-2 gap-4 mb-8">
-              {["Market Analysis", "Competitive Analysis", "Business Model Planning", "Target User Analysis", "MVP Validation", "Idea Summary", "Real-time Chat"].map(item => (
-                <li key={item} className="flex items-center gap-2 text-sm font-semibold">
-                  <div className="w-1.5 h-1.5 bg-[#e91e63] rounded-full" /> {item}
-                </li>
-              ))}
-            </ul>
-            <Link to="/projects/ai-cofounder" className="mt-auto bg-[#e91e63] text-white px-6 py-3 font-bold w-fit rounded-sm hover:bg-[#c2185b]">View Details</Link>
-          </div>
+          <p className="text-lg mb-8 opacity-90">A comprehensive web application for students and staff at Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU) providing integrated access to campus life features.</p>
+          <ul className="grid grid-cols-2 gap-4 mb-8">
+            {["Library Management", "Classroom Navigation", "Course Timetables", "Cafeteria Occupancy", "Issue Reporting", "Digital Student ID", "Meeting Room Bookings", "AI Chatbot Assistant (Lara)"].map(item => (
+              <li key={item} className="flex items-center gap-2 text-sm font-semibold">
+                <div className="w-1.5 h-1.5 bg-[#e91e63] rounded-full" /> {item}
+              </li>
+            ))}
+          </ul>
+          <Link to="/projects/campus-hub" className="mt-auto bg-[#e91e63] text-white px-6 py-3 font-bold w-fit rounded-sm hover:bg-[#c2185b]">View Details</Link>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {[
-            { title: "Blog Creation using GenAI on AWS", img: "/assets/images/Genai_aws.png", description: "Serverless application that generates blogs automatically using AWS Lambda, Bedrock, and Claude AI.", link: "/projects/blog-genai" },
-            { title: "Advanced RAG Pipeline using LangChain & Ollama", img: "/assets/images/RAG_Aktiengesellschaft.svg", description: "RAG pipeline that retrieves relevant documents and generates accurate answers using LangChain, Ollama, Chroma, and FAISS.", link: "/projects/advanced-rag" },
-            { title: "MCP (Model Context Protocol) HR Leave Management Assistant", img: "/assets/images/MCP.svg", description: "Python-based MCP server that powers an HR assistant chatbot for managing employee leave with natural language queries.", link: "/projects/mcp-hr-assistant" },
-            { title: "Graph RAG with Neo4j, LangChain, and Groq LLM", img: "/assets/images/ragbased.webp", description: "Advanced RAG system combining graph databases and LLMs for enhanced context retrieval and response generation.", link: "/projects/graph-rag" },
-            { title: "LangChain Agent Combining Wikipedia, ArXiv, and Custom RAG Tools", img: "/assets/images/AIAgents.png", description: "LangChain agents that dynamically choose and use multiple tools (Wikipedia, ArXiv, custom RAG) to answer varied queries.", link: "/projects/langchain-agent" },
-            { title: "LangGraph Chatbot with External Tools (Wikipedia & Arxiv)", img: "/assets/images/langgraph.jpeg", description: "Stateful chatbot using LangGraph that integrates Wikipedia and Arxiv APIs for extended knowledge retrieval.", link: "/projects/langgraph-chatbot" },
-            { title: "Chatbot with OpenAI GPT and LLaMA Using LangChain", img: "/assets/images/chatbotgpt.jpg", description: "AI chatbot using LangChain that integrates OpenAI GPT and Meta LLaMA models with a Streamlit UI for flexible model switching.", link: "/projects/chatbot-gpt-llama" },
-            { title: "Advanced RAG Pipeline using LangChain and Amazon Bedrock", img: "/assets/images/awsrag.png", description: "Cloud-native RAG application that allows users to interactively query PDF documents and receive context-aware answers using AWS Bedrock.", link: "/projects/bedrock-rag" },
-            { title: "MCP Chatbot Cursor Integration", img: "/assets/images/mcpchatbot.png", description: "Intelligent chatbot that integrates multiple MCP servers with Groq LLMs for seamless task orchestration in the Cursor IDE.", link: "/projects/mcp-chatbot-cursor" },
-            { title: "Agentic AI with Phidata Framework - Multimodal Agents", img: "/assets/images/agenticai.webp", description: "Multimodal agentic AI application that combines specialized agents for stock analysis and news retrieval using Phidata and Groq LLM.", link: "/projects/phidata-agent" },
-            { title: "Agentic AI with CrewAI & Gemini - Autonomous Marketing Workflow", img: "/assets/images/crewai.png", description: "Full agentic workflow using CrewAI with specialized marketing agents powered by Google Gemini 2.0 Flash for autonomous content generation.", link: "/projects/crewai-marketing" },
-            { title: "CrewAI Flows - Agentic Workflow Collection", img: "/assets/images/crewaiflows.png", description: "Collection of CrewAI workflow examples demonstrating flows, states, routing logic, and multi-agent collaboration for complex automation.", link: "/projects/crewai-flows" }
-          ].map((proj, idx) => (
-            <div key={idx} className="bg-white p-6 rounded-sm text-[#1a1325] flex flex-col h-full hover:shadow-2xl transition-all border-t-4 border-[#e91e63]">
-              <div className="aspect-video bg-gray-100 mb-6 overflow-hidden rounded">
-                <img src={proj.img.startsWith('/') ? proj.img : `https://picsum.photos/${idx + 100}/400/250`} alt={proj.title} className="w-full h-full object-contain" />
-              </div>
-              <h4 className="font-bold text-lg mb-2">{proj.title}</h4>
-              {/* @ts-ignore - description is optional */}
-              {proj.description && <p className="text-sm text-gray-600 mb-4 flex-grow">{proj.description}</p>}
-              {/* @ts-ignore - link is optional */}
-              {proj.link ? (
-                <Link to={proj.link} className="bg-[#e91e63] text-white px-4 py-2 text-sm font-bold w-fit rounded-sm hover:bg-[#c2185b] mt-auto">View Details</Link>
-              ) : (
-                <button className="bg-[#e91e63] text-white px-4 py-2 text-sm font-bold w-fit rounded-sm hover:bg-[#c2185b] mt-auto">View Details</button>
-              )}
-            </div>
-          ))}
+        {/* Project 2 */}
+        <div className="bg-white rounded-sm p-8 text-[#1a1325] flex flex-col">
+          <h3 className="text-2xl font-bold mb-6 border-b-2 border-[#e91e63] pb-2">AI Co-Founder Agent Web App</h3>
+          <div className="aspect-video bg-gray-100 mb-8 rounded-lg overflow-hidden shadow-inner">
+            <img src="/assets/images/AIco1.png" alt="AI Co-Founder" className="w-full h-full object-contain" />
+          </div>
+          <p className="text-lg mb-8 opacity-90">A comprehensive web application for analyzing and validating business ideas with AI-powered insights. Built with React, TypeScript, and Vite.</p>
+          <ul className="grid grid-cols-2 gap-4 mb-8">
+            {["Market Analysis", "Competitive Analysis", "Business Model Planning", "Target User Analysis", "MVP Validation", "Idea Summary", "Real-time Chat"].map(item => (
+              <li key={item} className="flex items-center gap-2 text-sm font-semibold">
+                <div className="w-1.5 h-1.5 bg-[#e91e63] rounded-full" /> {item}
+              </li>
+            ))}
+          </ul>
+          <Link to="/projects/ai-cofounder" className="mt-auto bg-[#e91e63] text-white px-6 py-3 font-bold w-fit rounded-sm hover:bg-[#c2185b]">View Details</Link>
         </div>
       </div>
-    </section>
+
+      <div className="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Blog Creation using GenAI on AWS", img: "/assets/images/Genai_aws.png", description: "Serverless application that generates blogs automatically using AWS Lambda, Bedrock, and Claude AI.", link: "/projects/blog-genai" },
+          { title: "Advanced RAG Pipeline using LangChain & Ollama", img: "/assets/images/RAG_Aktiengesellschaft.svg", description: "RAG pipeline that retrieves relevant documents and generates accurate answers using LangChain, Ollama, Chroma, and FAISS.", link: "/projects/advanced-rag" },
+          { title: "MCP (Model Context Protocol) HR Leave Management Assistant", img: "/assets/images/MCP.svg", description: "Python-based MCP server that powers an HR assistant chatbot for managing employee leave with natural language queries.", link: "/projects/mcp-hr-assistant" },
+          { title: "Graph RAG with Neo4j, LangChain, and Groq LLM", img: "/assets/images/ragbased.webp", description: "Advanced RAG system combining graph databases and LLMs for enhanced context retrieval and response generation.", link: "/projects/graph-rag" },
+          { title: "LangChain Agent Combining Wikipedia, ArXiv, and Custom RAG Tools", img: "/assets/images/AIAgents.png", description: "LangChain agents that dynamically choose and use multiple tools (Wikipedia, ArXiv, custom RAG) to answer varied queries.", link: "/projects/langchain-agent" },
+          { title: "LangGraph Chatbot with External Tools (Wikipedia & Arxiv)", img: "/assets/images/langgraph.jpeg", description: "Stateful chatbot using LangGraph that integrates Wikipedia and Arxiv APIs for extended knowledge retrieval.", link: "/projects/langgraph-chatbot" },
+          { title: "Chatbot with OpenAI GPT and LLaMA Using LangChain", img: "/assets/images/chatbotgpt.jpg", description: "AI chatbot using LangChain that integrates OpenAI GPT and Meta LLaMA models with a Streamlit UI for flexible model switching.", link: "/projects/chatbot-gpt-llama" },
+          { title: "Advanced RAG Pipeline using LangChain and Amazon Bedrock", img: "/assets/images/awsrag.png", description: "Cloud-native RAG application that allows users to interactively query PDF documents and receive context-aware answers using AWS Bedrock.", link: "/projects/bedrock-rag" },
+          { title: "MCP Chatbot Cursor Integration", img: "/assets/images/mcpchatbot.png", description: "Intelligent chatbot that integrates multiple MCP servers with Groq LLMs for seamless task orchestration in the Cursor IDE.", link: "/projects/mcp-chatbot-cursor" },
+          { title: "Agentic AI with Phidata Framework - Multimodal Agents", img: "/assets/images/agenticai.webp", description: "Multimodal agentic AI application that combines specialized agents for stock analysis and news retrieval using Phidata and Groq LLM.", link: "/projects/phidata-agent" },
+          { title: "Agentic AI with CrewAI & Gemini - Autonomous Marketing Workflow", img: "/assets/images/crewai.png", description: "Full agentic workflow using CrewAI with specialized marketing agents powered by Google Gemini 2.0 Flash for autonomous content generation.", link: "/projects/crewai-marketing" },
+          { title: "CrewAI Flows - Agentic Workflow Collection", img: "/assets/images/crewaiflows.png", description: "Collection of CrewAI workflow examples demonstrating flows, states, routing logic, and multi-agent collaboration for complex automation.", link: "/projects/crewai-flows" }
+        ].map((proj, idx) => (
+          <div key={idx} className="bg-white p-6 rounded-sm text-[#1a1325] flex flex-col h-full hover:shadow-2xl transition-all border-t-4 border-[#e91e63]">
+            <div className="aspect-video bg-gray-100 mb-6 overflow-hidden rounded">
+              <img src={proj.img.startsWith('/') ? proj.img : `https://picsum.photos/${idx + 100}/400/250`} alt={proj.title} className="w-full h-full object-contain" />
+            </div>
+            <h4 className="font-bold text-lg mb-2">{proj.title}</h4>
+            {/* @ts-ignore - description is optional */}
+            {proj.description && <p className="text-sm text-gray-600 mb-4 flex-grow">{proj.description}</p>}
+            {/* @ts-ignore - link is optional */}
+            {proj.link ? (
+              <Link to={proj.link} className="bg-[#e91e63] text-white px-4 py-2 text-sm font-bold w-fit rounded-sm hover:bg-[#c2185b] mt-auto">View Details</Link>
+            ) : (
+              <button className="bg-[#e91e63] text-white px-4 py-2 text-sm font-bold w-fit rounded-sm hover:bg-[#c2185b] mt-auto">View Details</button>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const MetricBadge: React.FC<{ value: string, label: string }> = ({ value, label }) => (
+  <div className="bg-[#e91e63]/5 p-3 rounded-sm border border-[#e91e63]/10 flex flex-col items-center justify-center min-w-[100px]">
+    <div className="flex items-center gap-1.5 text-[#e91e63] mb-0.5">
+      <TrendingUp size={14} />
+      <span className="text-xl font-bold">{value}</span>
+    </div>
+    <span className="text-[8px] uppercase tracking-wider text-gray-500 font-bold text-center leading-tight">{label}</span>
   </div>
+);
+
+const FeaturedWorkExperience = () => (
+  <section id="work-experience" className="bg-[#1a1325] py-24 px-8 border-t border-white/10 scroll-mt-20">
+    <div className="max-w-6xl mx-auto">
+      <SectionTitle>Work Experience</SectionTitle>
+      <p className="text-gray-400 text-xl mb-12">Over 4 years of professional experience in leading global companies like BMW Group, Siemens Healthineers and Bosch, driving innovation in Generative AI, Agentic AI, MLOps, and end to end AI pipelines.</p>
+
+      <div className="grid md:grid-cols-2 gap-12 mb-12">
+        {[
+          {
+            id: "bmw-working-student",
+            company: "BMW Group",
+            location: "Munich, Germany",
+            role: <>Generative AI Engineer<br /><span className="text-lg opacity-80">Working Student</span></>,
+            period: "Sept 2025 – Present",
+            metrics: [
+              { value: "40%", label: "Work Speedup" },
+              { value: "67%", label: "Time Saved" },
+              { value: "35%", label: "Less Manual Effort" }
+            ],
+            desc: "Architecting scalable agentic AI workflows with LangGraph, n8n, and CrewAI, achieving 40% improvement in task efficiency and 67% faster evaluation cycles.",
+            img: "/assets/images/bmw-ag-headquarters-43c8.jpg"
+          },
+          {
+            id: "siemens-thesis",
+            company: "Siemens Healthineers",
+            location: "Erlangen, Germany",
+            role: "Master Thesis - Graph RAG",
+            period: "Jan 2026 – Present",
+            metrics: [
+              { value: "35%", label: "Better Results" },
+              { value: "Deep", label: "Reasoning" }
+            ],
+            desc: "Researching and implementing Graph RAG to improve LLM outputs using structured knowledge graphs and enterprise databases (FHIR) to enhance contextual reasoning.",
+            img: "/assets/images/Siemens.jpg"
+          },
+          {
+            id: "bmw-internship",
+            company: "BMW Group",
+            location: "Munich, Germany",
+            role: <>Generative AI Engineer<br /><span className="text-lg opacity-80">Internship</span></>,
+            period: "March 2025 – Sept 2025",
+            metrics: [
+              { value: "70%", label: "Search Accuracy" },
+              { value: "2.5x", label: "Response Speed" },
+              { value: "63%", label: "Quality Boost" }
+            ],
+            desc: "Implemented end-to-end GraphRAG using Neo4j and LangChain, delivering 70% improvement in retrieval accuracy and 2.5x faster query execution.",
+            img: "/assets/images/bmw-ag-headquarters-43c8.jpg"
+          },
+
+          {
+            id: "bosch-ai-engineer",
+            company: "Bosch Global Software Technologies",
+            location: "Coimbatore, India",
+            role: "AI Engineer",
+            period: "July 2022 – Sept 2024",
+            metrics: [
+              { value: "95%", label: "Happy Users" },
+              { value: "60%", label: "Better Performance" },
+              { value: "40%", label: "Smoother Operations" }
+            ],
+            desc: "Deployed LLMs with RAG for chatbots, improving response quality by 30%. Won Org-wide Innovation award for Labcar reservation platform.",
+            img: "/assets/images/bosch_schillerhoehe_sh_img_w1280-2.jpg"
+          }
+        ].map((job, idx) => (
+          <div key={idx} className="bg-white p-8 rounded-sm text-[#1a1325] flex flex-col h-full hover:shadow-2xl transition-all border-t-4 border-[#e91e63]">
+            <div className="aspect-[4/3] bg-white/5 mb-8 rounded overflow-hidden shadow-lg border border-white/10 text-white">
+              <img src={job.img} alt={job.company} className="w-full h-full object-contain" />
+            </div>
+            <div className="flex flex-col sm:flex-row justify-between items-start gap-4 mb-4">
+              <div>
+                <h4 className="font-bold text-xl text-[#e91e63]">{job.role}</h4>
+                <p className="font-bold text-gray-700 text-lg">{job.company}</p>
+              </div>
+              <p className="text-gray-500 font-bold sm:text-right">{job.period}</p>
+            </div>
+
+            {job.metrics && (
+              <div className="flex gap-3 mb-6">
+                {job.metrics.map((metric, mIdx) => (
+                  <MetricBadge key={mIdx} value={metric.value} label={metric.label} />
+                ))}
+              </div>
+            )}
+
+            <p className="text-lg opacity-90 flex-grow mb-8">{job.desc}</p>
+            <Link to={`/experience#${job.id}`} className="bg-[#e91e63] text-white px-6 py-3 font-bold w-fit rounded-sm hover:bg-[#c2185b]">
+              View Details
+            </Link>
+          </div>
+        ))}
+      </div>
+      <div className="flex justify-center">
+        <Link to="/experience" className="bg-transparent border-2 border-[#e91e63] text-[#e91e63] px-10 py-4 font-bold rounded-sm hover:bg-[#e91e63] hover:text-white transition-all text-lg">
+          View Full Professional Experience
+        </Link>
+      </div>
+    </div>
+  </section>
 );
 
 const Hackathons = () => (
   <section id="hackathons" className="bg-[#1a1325] py-24 px-8 border-t border-white/10 scroll-mt-20">
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-6xl mx-auto">
       <SectionTitle>Hackathons</SectionTitle>
       <p className="text-gray-400 text-xl mb-12">Celebrate the innovative achievements from various hackathons, showcasing award-winning projects and competitive solutions in AI, Generative AI, Agentic AI, MLOPS and Data Science.</p>
 
@@ -321,8 +454,8 @@ const Hackathons = () => (
           }
         ].map((hack, idx) => (
           <div key={idx} className="bg-white p-8 rounded-sm text-[#1a1325] flex flex-col h-full hover:shadow-2xl transition-all border-t-4 border-[#e91e63]">
-            <div className="aspect-video bg-gray-100 mb-8 rounded overflow-hidden shadow-lg">
-              <img src={hack.img} alt={hack.title} className="w-full h-full object-cover" />
+            <div className="aspect-[4/3] bg-white/5 mb-8 rounded overflow-hidden shadow-lg border border-white/10">
+              <img src={hack.img} alt={hack.title} className="w-full h-full object-contain" />
             </div>
             <h4 className="font-bold text-xl mb-4 text-[#e91e63]">{hack.title}</h4>
             <p className="text-lg opacity-90 flex-grow mb-8">{hack.desc}</p>
@@ -336,9 +469,158 @@ const Hackathons = () => (
   </section>
 );
 
+const Education = () => (
+  <section id="education" className="bg-[#1a1325] py-24 px-8 border-t border-white/10 scroll-mt-20">
+    <div className="max-w-6xl mx-auto">
+      <SectionTitle>Education & Certifications</SectionTitle>
+      <div className="space-y-12">
+        <div className="flex flex-col md:flex-row gap-8 bg-white p-8 rounded-sm text-[#1a1325] hover:shadow-2xl transition-all border-t-4 border-[#e91e63]">
+          <div className="md:w-1/4">
+            <div className="p-4 bg-[#e91e63]/10 rounded-full w-fit text-[#e91e63] mb-4">
+              <GraduationCap size={32} />
+            </div>
+            <p className="font-bold text-gray-500">2024 – 2026</p>
+          </div>
+          <div className="flex-1">
+            <h4 className="text-2xl font-bold text-[#e91e63] mb-2">Friedrich-Alexander-Universität Erlangen-Nürnberg, Germany</h4>
+            <p className="text-xl font-bold text-gray-700 mb-4">Master of Science in International Information Systems</p>
+            <p className="text-lg opacity-90 leading-relaxed">
+              Combines IT, Software Engineering, AI, Data Science, Analytics, and Management to solve digital challenges.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-col md:flex-row gap-8 bg-white p-8 rounded-sm text-[#1a1325] hover:shadow-2xl transition-all border-t-4 border-[#e91e63]">
+          <div className="md:w-1/4">
+            <div className="p-4 bg-[#e91e63]/10 rounded-full w-fit text-[#e91e63] mb-4">
+              <GraduationCap size={32} />
+            </div>
+            <p className="font-bold text-gray-500">2017 – 2021</p>
+          </div>
+          <div className="flex-1">
+            <h4 className="text-2xl font-bold text-[#e91e63] mb-2">Anna University, Chennai, India</h4>
+            <p className="text-xl font-bold text-gray-700 mb-4">Bachelor of Engineering in Computer Science</p>
+            <p className="text-lg opacity-90 leading-relaxed">
+              Graduated in the top 10 percentage with a CGPA of 8.28/10, focusing on Artificial Intelligence, Data Structures, Object Oriented Programming, and Web Programming.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+const VolunteerExperience = () => (
+  <section id="volunteer" className="bg-[#1a1325] py-24 px-8 border-t border-white/10 scroll-mt-20">
+    <div className="max-w-6xl mx-auto">
+      <SectionTitle>Volunteer Experience & CSR Initiatives</SectionTitle>
+      <div className="mb-8">
+        <h3 className="text-2xl font-bold text-[#e91e63] mb-2 text-center md:text-left">Bosch Global Software Technologies</h3>
+      </div>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          {
+            title: "Plantation Drive",
+            desc: "Led CSR initiatives including environmental plantation drives to promote sustainability and community engagement."
+          },
+          {
+            title: "Education Outreach",
+            desc: "Teaching children in government schools, providing educational support and mentorship to underprivileged students."
+          },
+          {
+            title: "Mural Artwork Projects",
+            desc: "Coordinating mural artwork projects to beautify community spaces and promote artistic expression."
+          },
+          {
+            title: "Fun at Work Events",
+            desc: "Organizing \"Fun at Work\" events to foster team bonding and create a positive workplace culture."
+          },
+          {
+            title: "Department Magazine",
+            desc: "Designing the department magazine to communicate team achievements and company culture."
+          },
+          {
+            title: "Community Engagement",
+            desc: "Hosting various engaging activities to strengthen community connections and employee involvement."
+          }
+        ].map((item, idx) => (
+          <div key={idx} className="bg-white p-8 rounded-sm text-[#1a1325] flex flex-col hover:shadow-2xl transition-all border-t-4 border-[#e91e63]">
+            <div className="p-3 bg-[#e91e63]/10 rounded-full w-fit text-[#e91e63] mb-4">
+              <Heart size={24} />
+            </div>
+            <h4 className="font-bold text-xl mb-4">{item.title}</h4>
+            <p className="text-lg opacity-90 leading-relaxed text-gray-700">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const TechnicalSkills = () => (
+  <section id="skills" className="bg-[#1a1325] py-24 px-8 border-t border-white/10 scroll-mt-20">
+    <div className="max-w-6xl mx-auto text-left">
+      <SectionTitle>Technical Skills</SectionTitle>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          {
+            category: "Generative AI & Agentic Systems",
+            icon: <Cpu className="text-[#e91e63]" />,
+            skills: ["Generative AI", "Agentic AI", "Google ADK", "AI Agents", "RAG / Graph RAG", "LangChain / LangGraph", "CrewAI", "n8n", "Transformers", "MCP / A2A Protocol", "Prompt Engineering", "LLM Fine-tuning"]
+          },
+          {
+            category: "AI & Machine Learning",
+            icon: <Lightbulb className="text-[#e91e63]" />,
+            skills: ["Artificial Intelligence", "Machine Learning", "NLP", "MLOps", "Model Deployment"]
+          },
+          {
+            category: "Programming Languages",
+            icon: <Terminal className="text-[#e91e63]" />,
+            skills: ["Python (Expert)"]
+          },
+          {
+            category: "Cloud Infrastructure",
+            icon: <Cloud className="text-[#e91e63]" />,
+            skills: ["AWS (Amazon Web Services)", "Microsoft Azure", "Google Cloud Platform (GCP)"]
+          },
+          {
+            category: "Backend & Databases",
+            icon: <Database className="text-[#e91e63]" />,
+            skills: ["Flask / FastAPI", "REST API", "SQL", "MongoDB / NoSQL", "Neo4j (Graph)", "PGVector"]
+          },
+          {
+            category: "DevOps & Tools",
+            icon: <Server className="text-[#e91e63]" />,
+            skills: ["Docker / Kubernetes", "Jenkins / CI/CD", "Git / Linux", "JIRA"]
+          },
+          {
+            category: "Additional Skills",
+            icon: <Layers className="text-[#e91e63]" />,
+            skills: ["End-to-End Implementation", "Stakeholder Communication", "Agile Methodologies", "Technical Leadership"]
+          }
+        ].map((group, idx) => (
+          <Card key={idx} className="border-white/5 hover:border-[#e91e63]/30 transition-all h-full flex flex-col">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-3 bg-white/5 rounded-lg">{group.icon}</div>
+              <h3 className="text-xl font-bold">{group.category}</h3>
+            </div>
+            <div className="flex flex-wrap gap-2 mt-auto">
+              {group.skills.map(skill => (
+                <span key={skill} className="px-3 py-1 bg-white/5 text-xs font-semibold rounded-full text-gray-400 hover:text-[#e91e63] border border-white/5 hover:border-[#e91e63]/20 transition-all">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </Card>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
 const Footer = () => (
   <footer className="bg-[#1a1325] py-12 px-8 border-t border-white/5">
-    <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+    <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
       <div className="text-center md:text-left mb-6 md:mb-0">
         <h3 className="text-2xl font-bold text-[#e91e63] mb-2">Subitha Murugesan</h3>
         <p className="text-gray-500">AI Engineer</p>
@@ -370,8 +652,13 @@ function Home() {
       <Hero />
       <About />
       <WhyPortfolio />
-      <ProjectHighlight />
+      <ExploreSection />
+      <FeaturedWorkExperience />
+      <TechnicalSkills />
+      <FeaturedProjects />
       <Hackathons />
+      <Education />
+      <VolunteerExperience />
       <Footer />
     </div>
   );
