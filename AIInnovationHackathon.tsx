@@ -27,13 +27,14 @@ const Card = ({ children, className = "" }: { children?: React.ReactNode, classN
 const galleryImages = [
     { src: "/assets/images/aihack_flowchart.jpg", alt: "AI Co-Founder Agentic Workflow Flowchart" },
     { src: "/assets/images/aihack_win.jpg", alt: "Winning 1st Place at AI Innovation Hackathon" },
-    { src: "/assets/images/aihack_dashboard.png", alt: "App Page: Idea Summary & Dashboard" },
-    { src: "/assets/images/aihack_market_analysis.png", alt: "App Page: Market & Competitor Analysis" },
+    { src: "/assets/images/aihack_dashboard.png", alt: "App Page: Front End" },
+    { src: "/assets/images/aihack_award_ceremony.png", alt: "Competitor Analysis Page" },
+    { src: "/assets/images/aihack_market_analysis.png", alt: "App Page: Idea summary and validation" },
     { src: "/assets/images/aihack_user_analysis.png", alt: "App Page: User Persona & Target Analysis" },
-    { src: "/assets/images/aihack_business_model.png", alt: "App Page: Business Model & MVP Planning" },
-    { src: "/assets/images/aihack_recommendation.png", alt: "App Page: Strategic Go/No-Go Analysis" },
-    { src: "/assets/images/aihack_team_collaboration.png", alt: "Hackathon: Team Collaboration & Brainstorming" },
-    { src: "/assets/images/aihack_award_ceremony.png", alt: "Hackathon: Award Ceremony" },
+    { src: "/assets/images/aihack_business_model.png", alt: "App Page: Business Model" },
+    { src: "/assets/images/aihack_recommendation.png", alt: "App Page: MVP Planning" },
+    { src: "/assets/images/aihack_team_collaboration.png", alt: "App Page: User Persona & Target Analysis" },
+
 ];
 
 const AIInnovationHackathon = () => {
