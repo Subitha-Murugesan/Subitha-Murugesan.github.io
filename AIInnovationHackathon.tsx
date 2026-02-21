@@ -25,15 +25,15 @@ const Card = ({ children, className = "" }: { children?: React.ReactNode, classN
 );
 
 const galleryImages = [
-    { src: "/assets/images/AI_cofounder_flowchart.jpg", alt: "AI Co-Founder Agentic Workflow Flowchart" },
-    { src: "/assets/images/aihack_winning_team.jpg", alt: "Winning 1st Place at AI Innovation Hackathon" },
-    { src: "/assets/images/aihack_announcement.png", alt: "AI Innovation Hackathon Winner announcement" },
-    { src: "/assets/images/aihack_app_showcase.png", alt: "AI Co-Founder Project Showcase" },
-    { src: "/assets/images/aihack_pitch.png", alt: "Pitching the AI Co-Founder" },
-    { src: "/assets/images/aihack_collaboration.png", alt: "Team work and collaboration" },
-    { src: "/assets/images/aihack_ceremony.png", alt: "Certificate ceremony" },
-    { src: "/assets/images/aihack_venue.png", alt: "Hackathon environment" },
-    { src: "/assets/images/aihack_celebration.png", alt: "The winning moment" },
+    { src: "/assets/images/aihack_flowchart.jpg", alt: "AI Co-Founder Agentic Workflow Flowchart" },
+    { src: "/assets/images/aihack_win.jpg", alt: "Winning 1st Place at AI Innovation Hackathon" },
+    { src: "/assets/images/aihack_dashboard.png", alt: "App Page: Idea Summary & Dashboard" },
+    { src: "/assets/images/aihack_market_analysis.png", alt: "App Page: Market & Competitor Analysis" },
+    { src: "/assets/images/aihack_user_analysis.png", alt: "App Page: User Persona & Target Analysis" },
+    { src: "/assets/images/aihack_business_model.png", alt: "App Page: Business Model & MVP Planning" },
+    { src: "/assets/images/aihack_recommendation.png", alt: "App Page: Strategic Go/No-Go Analysis" },
+    { src: "/assets/images/aihack_team_collaboration.png", alt: "Hackathon: Team Collaboration & Brainstorming" },
+    { src: "/assets/images/aihack_award_ceremony.png", alt: "Hackathon: Award Ceremony" },
 ];
 
 const AIInnovationHackathon = () => {
