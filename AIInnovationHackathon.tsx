@@ -25,6 +25,8 @@ const Card = ({ children, className = "" }: { children?: React.ReactNode, classN
 );
 
 const galleryImages = [
+    { src: "/assets/images/AI_cofounder_flowchart.jpg", alt: "AI Co-Founder Agentic Workflow Flowchart" },
+    { src: "/assets/images/20260120_201944360_iOS.jpg", alt: "Winning 1st Place at AI Innovation Hackathon" },
     { src: "/assets/images/aihack1.png", alt: "AI Innovation Hackathon Winner announcement" },
     { src: "/assets/images/aihack2.png", alt: "AI Co-Founder Project Showcase" },
     { src: "/assets/images/aihack3.png", alt: "Pitching the AI Co-Founder" },

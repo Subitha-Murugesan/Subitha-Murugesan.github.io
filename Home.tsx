@@ -432,7 +432,7 @@ const Hackathons = () => (
           {
             title: "AI Innovation Hackathon - Winner 1st Place",
             desc: "AI Co-Founder prototype built in a fast-paced hackathon at ZOLLHOF, using multi-agent AI workflows (CrewAI) and Gemini Flash 2.0.",
-            img: "/assets/images/aihack1.png",
+            img: "/assets/images/20260120_201944360_iOS.jpg",
             link: "/hackathons/ai-innovation"
           },
           {
