@@ -30,7 +30,7 @@ const galleryImages = [
     { src: "/assets/images/aihack_dashboard.png", alt: "App Page: Front End" },
     { src: "/assets/images/aihack_award_ceremony.png", alt: "Competitor Analysis Page" },
     { src: "/assets/images/aihack_market_analysis.png", alt: "App Page: Idea summary and validation" },
-    { src: "/assets/images/aihack_user_analysis.png", alt: "App Page: User Persona & Target Analysis" },
+    { src: "/assets/images/aihack_user_analysis.png", alt: "App Page: Market Analysis" },
     { src: "/assets/images/aihack_business_model.png", alt: "App Page: Business Model" },
     { src: "/assets/images/aihack_recommendation.png", alt: "App Page: MVP Planning" },
     { src: "/assets/images/aihack_team_collaboration.png", alt: "App Page: User Persona & Target Analysis" },
