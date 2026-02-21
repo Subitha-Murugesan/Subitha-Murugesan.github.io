@@ -20,6 +20,7 @@ import FAUAIHackathon from './FAUAIHackathon';
 import EELISAGenAI from './EELISAGenAI';
 import SiemensHealthineers from './SiemensHealthineers';
 import HealthcareHackathon from './HealthcareHackathon';
+import ParkingReservation from './ParkingReservation';
 import Experience from './Experience';
 
 import ScrollToHash from './ScrollToHash';
@@ -45,6 +46,7 @@ function App() {
         <Route path="/projects/phidata-agent" element={<PhidataAgent />} />
         <Route path="/projects/crewai-marketing" element={<CrewAIMarketing />} />
         <Route path="/projects/crewai-flows" element={<CrewAIFlows />} />
+        <Route path="/projects/parking-reservation" element={<ParkingReservation />} />
         <Route path="/hackathons/fau-ai" element={<FAUAIHackathon />} />
         <Route path="/hackathons/eelisa-genai" element={<EELISAGenAI />} />
         <Route path="/hackathons/siemens-healthineers" element={<SiemensHealthineers />} />
