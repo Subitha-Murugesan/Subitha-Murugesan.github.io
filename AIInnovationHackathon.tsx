@@ -26,14 +26,14 @@ const Card = ({ children, className = "" }: { children?: React.ReactNode, classN
 
 const galleryImages = [
     { src: "/assets/images/AI_cofounder_flowchart.jpg", alt: "AI Co-Founder Agentic Workflow Flowchart" },
-    { src: "/assets/images/20260120_201944360_iOS.jpg", alt: "Winning 1st Place at AI Innovation Hackathon" },
-    { src: "/assets/images/aihack1.png", alt: "AI Innovation Hackathon Winner announcement" },
-    { src: "/assets/images/aihack2.png", alt: "AI Co-Founder Project Showcase" },
-    { src: "/assets/images/aihack3.png", alt: "Pitching the AI Co-Founder" },
-    { src: "/assets/images/aihack4.png", alt: "Team work and collaboration" },
-    { src: "/assets/images/aihack5.png", alt: "Certificate ceremony" },
-    { src: "/assets/images/aihack6.png", alt: "Hackathon environment" },
-    { src: "/assets/images/aihack7.png", alt: "The winning moment" },
+    { src: "/assets/images/aihack_winning_team.jpg", alt: "Winning 1st Place at AI Innovation Hackathon" },
+    { src: "/assets/images/aihack_announcement.png", alt: "AI Innovation Hackathon Winner announcement" },
+    { src: "/assets/images/aihack_app_showcase.png", alt: "AI Co-Founder Project Showcase" },
+    { src: "/assets/images/aihack_pitch.png", alt: "Pitching the AI Co-Founder" },
+    { src: "/assets/images/aihack_collaboration.png", alt: "Team work and collaboration" },
+    { src: "/assets/images/aihack_ceremony.png", alt: "Certificate ceremony" },
+    { src: "/assets/images/aihack_venue.png", alt: "Hackathon environment" },
+    { src: "/assets/images/aihack_celebration.png", alt: "The winning moment" },
 ];
 
 const AIInnovationHackathon = () => {
