@@ -430,6 +430,12 @@ const Hackathons = () => (
       <div className="grid md:grid-cols-2 gap-12">
         {[
           {
+            title: "AI Innovation Hackathon - Winner 1st Place",
+            desc: "AI Co-Founder prototype built in a fast-paced hackathon at ZOLLHOF, using multi-agent AI workflows (CrewAI) and Gemini Flash 2.0.",
+            img: "/assets/images/aihack1.png",
+            link: "/hackathons/ai-innovation"
+          },
+          {
             title: "AI Hackathon - Winner Friedrich-Alexander-Universität Erlangen-Nürnberg",
             desc: "AI Co-Founder Agent prototype that validates startup ideas and generates market insights, securing 1st place in the FAU WiSo AI Hackathon.",
             img: "/assets/images/Hack1.jpeg",

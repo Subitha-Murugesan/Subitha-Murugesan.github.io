@@ -21,6 +21,7 @@ import EELISAGenAI from './EELISAGenAI';
 import SiemensHealthineers from './SiemensHealthineers';
 import HealthcareHackathon from './HealthcareHackathon';
 import ParkingReservation from './ParkingReservation';
+import AIInnovationHackathon from './AIInnovationHackathon';
 import Experience from './Experience';
 
 import ScrollToHash from './ScrollToHash';
@@ -51,6 +52,7 @@ function App() {
         <Route path="/hackathons/eelisa-genai" element={<EELISAGenAI />} />
         <Route path="/hackathons/siemens-healthineers" element={<SiemensHealthineers />} />
         <Route path="/hackathons/healthcare-bayern" element={<HealthcareHackathon />} />
+        <Route path="/hackathons/ai-innovation" element={<AIInnovationHackathon />} />
       </Routes>
     </Router>
   );
