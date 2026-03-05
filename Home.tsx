@@ -564,6 +564,7 @@ const Certifications = () => (
           { title: "Docker (Udemy)", issuer: "Udemy", file: "Subitha_docker_udemy_course_completion.pdf" },
           { title: "Jenkins", issuer: "Professional Certification", file: "Subitha_jenkins_course_completion.pdf" },
           { title: "JSON Path", issuer: "Professional Certification", file: "Subitha_json_pathtest_course_completion.pdf" },
+          { title: "Neo4j Generative AI Fundamentals", issuer: "Neo4j Graph Academy", file: "Subitha_Neo4j_GenerativeAI_Fundamentals.pdf" },
           { title: "Neo4j Vector Indexes", issuer: "Neo4j Graph Academy", file: "Subitha_neo4j_vector_indexes_course_completion.pdf" },
           { title: "Python", issuer: "Professional Certification", file: "Subitha_python_course_completion.pdf" },
         ].map((cert, idx) => (
