@@ -489,23 +489,23 @@ const Hackathons = () => (
           },
           {
             title: "Bosch Fit Fest 2024 Hackathon",
-            desc: "Participated in an intensive innovation challenge focusing on healthcare and fitness technology.",
-            img: "/assets/images/Hack2.jpg",
             certificate: "/assets/hackathon_certifcate/Subitha_Fit_fest_2024_Hackathon.pdf"
           },
           {
             title: "Bosch Fit Fest 2023 Hackathon",
-            desc: "Developed prototypes for fitness and wellness tracking solutions.",
-            img: "/assets/images/Hack3.jpg",
             certificate: "/assets/hackathon_certifcate/Subitha_fit-fest-2023-cert_hackathon.pdf"
           }
         ].map((hack, idx) => (
           <div key={idx} className="bg-white p-8 rounded-sm text-[#1a1325] flex flex-col h-full hover:shadow-2xl transition-all border-t-4 border-[#e91e63]">
-            <div className="aspect-[4/3] bg-white/5 mb-8 rounded overflow-hidden shadow-lg border border-white/10">
-              <img src={hack.img} alt={hack.title} className="w-full h-full object-contain" />
-            </div>
+            {/* @ts-ignore - img check */}
+            {hack.img && (
+              <div className="aspect-[4/3] bg-white/5 mb-8 rounded overflow-hidden shadow-lg border border-white/10">
+                <img src={hack.img} alt={hack.title} className="w-full h-full object-contain" />
+              </div>
+            )}
             <h4 className="font-bold text-xl mb-4 text-[#e91e63]">{hack.title}</h4>
-            <p className="text-lg opacity-90 flex-grow mb-8">{hack.desc}</p>
+            {/* @ts-ignore - desc check */}
+            {hack.desc && <p className="text-lg opacity-90 flex-grow mb-8">{hack.desc}</p>}
             <div className="flex flex-wrap gap-4 mt-auto">
               {/* @ts-ignore - link check */}
               {hack.link && (
