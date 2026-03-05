@@ -21,7 +21,8 @@ import {
   Terminal,
   Server,
   Layers,
-  Award
+  Award,
+  Trophy
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -51,6 +52,7 @@ const Navbar = () => (
         <Link to="/#hackathons" className="hover:text-[#e91e63] transition-colors cursor-pointer">Hackathons</Link>
         <Link to="/#education" className="hover:text-[#e91e63] transition-colors cursor-pointer">Education</Link>
         <Link to="/#certifications" className="hover:text-[#e91e63] transition-colors cursor-pointer">Certifications</Link>
+        <Link to="/#hackathon-certifications" className="hover:text-[#e91e63] transition-colors cursor-pointer">Hackathon Certificates</Link>
         <Link to="/#volunteer" className="hover:text-[#e91e63] transition-colors cursor-pointer">Volunteer</Link>
       </div>
     </div>
@@ -543,6 +545,40 @@ const Education = () => (
   </section>
 );
 
+const HackathonCertifications = () => (
+  <section id="hackathon-certifications" className="bg-[#1a1325] py-24 px-8 border-t border-white/10 scroll-mt-20">
+    <div className="max-w-6xl mx-auto">
+      <SectionTitle>Hackathon Certificates</SectionTitle>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: "EELISA Generative AI Experience Lab", issuer: "EELISA European University", file: "Subitha_EElisa_Genai_credentials.pdf" },
+          { title: "Fit Fest 2024 Hackathon", issuer: "Fit Fest", file: "Subitha_Fit_fest_2024_Hackathon.pdf" },
+          { title: "Fit Fest 2023 Hackathon", issuer: "Fit Fest", file: "Subitha_fit-fest-2023-cert_hackathon.pdf" },
+        ].map((cert, idx) => (
+          <a
+            key={idx}
+            href={`/assets/hackathon_certifcate/${cert.file}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block"
+          >
+            <Card className="border-white/5 hover:border-[#e91e63] transition-all h-full flex items-center gap-4">
+              <div className="p-3 bg-[#e91e63]/10 rounded-lg text-[#e91e63] group-hover:bg-[#e91e63] group-hover:text-white transition-all">
+                <Trophy size={24} />
+              </div>
+              <div className="flex-1">
+                <h4 className="font-bold text-lg group-hover:text-[#e91e63] transition-colors leading-tight">{cert.title}</h4>
+                <p className="text-sm text-gray-400 mt-1">{cert.issuer}</p>
+              </div>
+              <ExternalLink size={16} className="text-gray-600 group-hover:text-[#e91e63] transition-colors" />
+            </Card>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
 const Certifications = () => (
   <section id="certifications" className="bg-[#1a1325] py-24 px-8 border-t border-white/10 scroll-mt-20">
     <div className="max-w-6xl mx-auto">
@@ -740,6 +776,7 @@ function Home() {
       <FeaturedProjects />
       <Hackathons />
       <Education />
+      <HackathonCertifications />
       <Certifications />
       <VolunteerExperience />
       <Footer />
