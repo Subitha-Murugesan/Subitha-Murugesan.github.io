@@ -20,7 +20,8 @@ import {
   Database,
   Terminal,
   Server,
-  Layers
+  Layers,
+  Award
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -49,6 +50,7 @@ const Navbar = () => (
         <Link to="/#featured-projects" className="hover:text-[#e91e63] transition-colors cursor-pointer">Projects</Link>
         <Link to="/#hackathons" className="hover:text-[#e91e63] transition-colors cursor-pointer">Hackathons</Link>
         <Link to="/#education" className="hover:text-[#e91e63] transition-colors cursor-pointer">Education</Link>
+        <Link to="/#certifications" className="hover:text-[#e91e63] transition-colors cursor-pointer">Certifications</Link>
         <Link to="/#volunteer" className="hover:text-[#e91e63] transition-colors cursor-pointer">Volunteer</Link>
       </div>
     </div>
@@ -238,7 +240,7 @@ const FeaturedProjects = () => (
       <SectionTitle>Featured Projects</SectionTitle>
       <p className="text-gray-400 text-xl mb-12">Explore a diverse collection of AI, Generative AI, Agentic AI, MCP, AWS cloud Solutions, MLOPS and Data Science projects showcasing real-world implementations and technical skills.</p>
 
-      <div className="grid md:grid-cols-2 gap-12 mb-24">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-24">
         {/* Project 1 */}
         <div className="bg-white rounded-sm p-8 text-[#1a1325] flex flex-col">
           <h3 className="text-2xl font-bold mb-6 border-b-2 border-[#e91e63] pb-2">Campus Hub - Your University Companion App</h3>
@@ -272,10 +274,28 @@ const FeaturedProjects = () => (
           </ul>
           <Link to="/projects/ai-cofounder" className="mt-auto bg-[#e91e63] text-white px-6 py-3 font-bold w-fit rounded-sm hover:bg-[#c2185b]">View Details</Link>
         </div>
+
+        {/* Project 3 */}
+        <div className="bg-white rounded-sm p-8 text-[#1a1325] flex flex-col">
+          <h3 className="text-2xl font-bold mb-6 border-b-2 border-[#e91e63] pb-2">DevClean AI - Disk Optimization System</h3>
+          <div className="aspect-video bg-gray-100 mb-8 rounded-lg overflow-hidden shadow-inner">
+            <img src="/assets/images/1772542150455.jpeg" alt="DevClean AI" className="w-full h-full object-contain" />
+          </div>
+          <p className="text-lg mb-8 opacity-90">An AI-powered system designed to manage and optimize disk space for developers using Multi-AI Agents and automated monitoring.</p>
+          <ul className="grid grid-cols-2 gap-4 mb-8">
+            {["Multi-Agent Automation", "Telegram Bot Integration", "Disk Usage Monitoring", "Cleanup Suggestions", "React Dashboard", "Human-in-the-Loop"].map(item => (
+              <li key={item} className="flex items-center gap-2 text-sm font-semibold">
+                <div className="w-1.5 h-1.5 bg-[#e91e63] rounded-full" /> {item}
+              </li>
+            ))}
+          </ul>
+          <Link to="/hackathons/devclean" className="mt-auto bg-[#e91e63] text-white px-6 py-3 font-bold w-fit rounded-sm hover:bg-[#c2185b]">View Details</Link>
+        </div>
       </div>
 
       <div className="grid md:grid-cols-3 gap-6">
         {[
+          { title: "Voice n8n - Voice Trigger Quality Defect Scanner", img: "/assets/images/n8nvoice1.png", description: "Automation workflow with a voice-enabled frontend that detects and analyzes quality defects using n8n and speech recognition.", link: "/projects/voice-quality-scanner" },
           { title: "Blog Creation using GenAI on AWS", img: "/assets/images/Genai_aws.png", description: "Serverless application that generates blogs automatically using AWS Lambda, Bedrock, and Claude AI.", link: "/projects/blog-genai" },
           { title: "Advanced RAG Pipeline using LangChain & Ollama", img: "/assets/images/RAG_Aktiengesellschaft.svg", description: "RAG pipeline that retrieves relevant documents and generates accurate answers using LangChain, Ollama, Chroma, and FAISS.", link: "/projects/advanced-rag" },
           { title: "MCP (Model Context Protocol) HR Leave Management Assistant", img: "/assets/images/MCP.svg", description: "Python-based MCP server that powers an HR assistant chatbot for managing employee leave with natural language queries.", link: "/projects/mcp-hr-assistant" },
@@ -430,6 +450,12 @@ const Hackathons = () => (
       <div className="grid md:grid-cols-2 gap-12">
         {[
           {
+            title: "OpenClaw Global Unhackathon - DevClean",
+            desc: "AI-powered disk cleanup assistant built with Multi-Agent AI systems (OpenClaw) to automatically monitor and optimize storage space.",
+            img: "/assets/images/1772542150455.jpeg",
+            link: "/hackathons/devclean"
+          },
+          {
             title: "AI Innovation Hackathon - Winner 1st Place",
             desc: "AI Co-Founder prototype built in a fast-paced hackathon at ZOLLHOF, using multi-agent AI workflows (CrewAI) and Gemini Flash 2.0.",
             img: "/assets/images/aihack_win.jpg",
@@ -479,7 +505,7 @@ const Hackathons = () => (
 const Education = () => (
   <section id="education" className="bg-[#1a1325] py-24 px-8 border-t border-white/10 scroll-mt-20">
     <div className="max-w-6xl mx-auto">
-      <SectionTitle>Education & Certifications</SectionTitle>
+      <SectionTitle>Education</SectionTitle>
       <div className="space-y-12">
         <div className="flex flex-col md:flex-row gap-8 bg-white p-8 rounded-sm text-[#1a1325] hover:shadow-2xl transition-all border-t-4 border-[#e91e63]">
           <div className="md:w-1/4">
@@ -512,6 +538,54 @@ const Education = () => (
             </p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+);
+
+const Certifications = () => (
+  <section id="certifications" className="bg-[#1a1325] py-24 px-8 border-t border-white/10 scroll-mt-20">
+    <div className="max-w-6xl mx-auto">
+      <SectionTitle>Certifications</SectionTitle>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: "AI for Everyone", issuer: "DeepLearning.AI", file: "Subitha_AI_for _everyone_course_completion.pdf" },
+          { title: "Constructing Knowledge Graphs with Neo4j GraphRAG", issuer: "Neo4j Graph Academy", file: "Subitha_Constructing Knowledge Graphs with Neo4j GraphRAG.pdf" },
+          { title: "Cypher Fundamentals", issuer: "Neo4j Graph Academy", file: "Subitha_Cypher Fundamentals.pdf" },
+          { title: "Data Science", issuer: "Professional Certification", file: "Subitha_Datascience_Course_completion.pdf" },
+          { title: "Docker", issuer: "Professional Certification", file: "Subitha_Docker_course_completion.pdf" },
+          { title: "Importing CSV data into Neo4j", issuer: "Neo4j Graph Academy", file: "Subitha_Importing CSV data into Neo4j.pdf" },
+          { title: "Importing Data Fundamentals", issuer: "Neo4j Graph Academy", file: "Subitha_Importing_DataFundamentals.pdf" },
+          { title: "Machine Learning (ML)", issuer: "Professional Certification", file: "Subitha_ML_certificate.pdf" },
+          { title: "Neo4j Fundamentals", issuer: "Neo4j Graph Academy", file: "Subitha_Neo4j_Fundamentals.pdf" },
+          { title: "Using Neo4j with Python", issuer: "Neo4j Graph Academy", file: "Subitha_Using_Neo4j with Python.pdf" },
+          { title: "Cypher Neo4j", issuer: "Neo4j Graph Academy", file: "Subitha_cypher_neo4j_course_completion.pdf" },
+          { title: "Docker Labs", issuer: "Professional Certification", file: "Subitha_docker_labs_course_completion.pdf" },
+          { title: "Docker (Udemy)", issuer: "Udemy", file: "Subitha_docker_udemy_course_completion.pdf" },
+          { title: "Jenkins", issuer: "Professional Certification", file: "Subitha_jenkins_course_completion.pdf" },
+          { title: "JSON Path", issuer: "Professional Certification", file: "Subitha_json_pathtest_course_completion.pdf" },
+          { title: "Neo4j Vector Indexes", issuer: "Neo4j Graph Academy", file: "Subitha_neo4j_vector_indexes_course_completion.pdf" },
+          { title: "Python", issuer: "Professional Certification", file: "Subitha_python_course_completion.pdf" },
+        ].map((cert, idx) => (
+          <a
+            key={idx}
+            href={`/assets/Course certificates/${cert.file}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block"
+          >
+            <Card className="border-white/5 hover:border-[#e91e63] transition-all h-full flex items-center gap-4">
+              <div className="p-3 bg-[#e91e63]/10 rounded-lg text-[#e91e63] group-hover:bg-[#e91e63] group-hover:text-white transition-all">
+                <Award size={24} />
+              </div>
+              <div className="flex-1">
+                <h4 className="font-bold text-lg group-hover:text-[#e91e63] transition-colors leading-tight">{cert.title}</h4>
+                <p className="text-sm text-gray-400 mt-1">{cert.issuer}</p>
+              </div>
+              <ExternalLink size={16} className="text-gray-600 group-hover:text-[#e91e63] transition-colors" />
+            </Card>
+          </a>
+        ))}
       </div>
     </div>
   </section>
@@ -665,6 +739,7 @@ function Home() {
       <FeaturedProjects />
       <Hackathons />
       <Education />
+      <Certifications />
       <VolunteerExperience />
       <Footer />
     </div>

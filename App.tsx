@@ -22,6 +22,8 @@ import SiemensHealthineers from './SiemensHealthineers';
 import HealthcareHackathon from './HealthcareHackathon';
 import ParkingReservation from './ParkingReservation';
 import AIInnovationHackathon from './AIInnovationHackathon';
+import DevCleanHackathon from './DevCleanHackathon';
+import VoiceQualityScanner from './VoiceQualityScanner';
 import Experience from './Experience';
 
 import ScrollToHash from './ScrollToHash';
@@ -53,6 +55,8 @@ function App() {
         <Route path="/hackathons/siemens-healthineers" element={<SiemensHealthineers />} />
         <Route path="/hackathons/healthcare-bayern" element={<HealthcareHackathon />} />
         <Route path="/hackathons/ai-innovation" element={<AIInnovationHackathon />} />
+        <Route path="/hackathons/devclean" element={<DevCleanHackathon />} />
+        <Route path="/projects/voice-quality-scanner" element={<VoiceQualityScanner />} />
       </Routes>
     </Router>
   );
