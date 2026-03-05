@@ -52,7 +52,6 @@ const Navbar = () => (
         <Link to="/#hackathons" className="hover:text-[#e91e63] transition-colors cursor-pointer">Hackathons</Link>
         <Link to="/#education" className="hover:text-[#e91e63] transition-colors cursor-pointer">Education</Link>
         <Link to="/#certifications" className="hover:text-[#e91e63] transition-colors cursor-pointer">Certifications</Link>
-        <Link to="/#hackathon-certifications" className="hover:text-[#e91e63] transition-colors cursor-pointer">Hackathon Certificates</Link>
         <Link to="/#volunteer" className="hover:text-[#e91e63] transition-colors cursor-pointer">Volunteer</Link>
       </div>
     </div>
@@ -473,7 +472,8 @@ const Hackathons = () => (
             title: "EELISA Generative AI Experience Lab - 2nd Place",
             desc: "GenAI Campus Hub prototype with integrated chatbots for smart campus services, earning jury recognition for technical excellence.",
             img: "/assets/images/Hack2.jpg",
-            link: "/hackathons/eelisa-genai"
+            link: "/hackathons/eelisa-genai",
+            certificate: "/assets/hackathon_certifcate/Subitha_EElisa_Genai_credentials.pdf"
           },
           {
             title: "Siemens Healthineers DNA Hackathon",
@@ -486,6 +486,18 @@ const Hackathons = () => (
             desc: "AWS Bedrock + RAG conversational AI prototype developed in a 3-day innovation sprint to make healthcare data accessible.",
             img: "/assets/images/Hack4.png",
             link: "/hackathons/healthcare-bayern"
+          },
+          {
+            title: "Bosch Fit Fest 2024 Hackathon",
+            desc: "Participated in an intensive innovation challenge focusing on healthcare and fitness technology.",
+            img: "/assets/images/Hack2.jpg",
+            certificate: "/assets/hackathon_certifcate/Subitha_Fit_fest_2024_Hackathon.pdf"
+          },
+          {
+            title: "Bosch Fit Fest 2023 Hackathon",
+            desc: "Developed prototypes for fitness and wellness tracking solutions.",
+            img: "/assets/images/Hack3.jpg",
+            certificate: "/assets/hackathon_certifcate/Subitha_fit-fest-2023-cert_hackathon.pdf"
           }
         ].map((hack, idx) => (
           <div key={idx} className="bg-white p-8 rounded-sm text-[#1a1325] flex flex-col h-full hover:shadow-2xl transition-all border-t-4 border-[#e91e63]">
@@ -494,9 +506,25 @@ const Hackathons = () => (
             </div>
             <h4 className="font-bold text-xl mb-4 text-[#e91e63]">{hack.title}</h4>
             <p className="text-lg opacity-90 flex-grow mb-8">{hack.desc}</p>
-            <Link to={hack.link} className="bg-[#e91e63] text-white px-6 py-3 font-bold w-fit rounded-sm hover:bg-[#c2185b]">
-              View Details
-            </Link>
+            <div className="flex flex-wrap gap-4 mt-auto">
+              {/* @ts-ignore - link check */}
+              {hack.link && (
+                <Link to={hack.link} className="bg-[#e91e63] text-white px-6 py-3 font-bold w-fit rounded-sm hover:bg-[#c2185b]">
+                  View Details
+                </Link>
+              )}
+              {/* @ts-ignore - certificate check */}
+              {hack.certificate && (
+                <a
+                  href={hack.certificate}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-transparent border-2 border-[#e91e63] text-[#e91e63] px-6 py-[10px] font-bold w-fit rounded-sm hover:bg-[#e91e63] hover:text-white transition-all"
+                >
+                  View Certificate
+                </a>
+              )}
+            </div>
           </div>
         ))}
       </div>
@@ -540,40 +568,6 @@ const Education = () => (
             </p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-);
-
-const HackathonCertifications = () => (
-  <section id="hackathon-certifications" className="bg-[#1a1325] py-24 px-8 border-t border-white/10 scroll-mt-20">
-    <div className="max-w-6xl mx-auto">
-      <SectionTitle>Hackathon Certificates</SectionTitle>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {[
-          { title: "EELISA Generative AI Experience Lab", issuer: "EELISA European University", file: "Subitha_EElisa_Genai_credentials.pdf" },
-          { title: "Fit Fest 2024 Hackathon", issuer: "Fit Fest", file: "Subitha_Fit_fest_2024_Hackathon.pdf" },
-          { title: "Fit Fest 2023 Hackathon", issuer: "Fit Fest", file: "Subitha_fit-fest-2023-cert_hackathon.pdf" },
-        ].map((cert, idx) => (
-          <a
-            key={idx}
-            href={`/assets/hackathon_certifcate/${cert.file}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block"
-          >
-            <Card className="border-white/5 hover:border-[#e91e63] transition-all h-full flex items-center gap-4">
-              <div className="p-3 bg-[#e91e63]/10 rounded-lg text-[#e91e63] group-hover:bg-[#e91e63] group-hover:text-white transition-all">
-                <Trophy size={24} />
-              </div>
-              <div className="flex-1">
-                <h4 className="font-bold text-lg group-hover:text-[#e91e63] transition-colors leading-tight">{cert.title}</h4>
-                <p className="text-sm text-gray-400 mt-1">{cert.issuer}</p>
-              </div>
-              <ExternalLink size={16} className="text-gray-600 group-hover:text-[#e91e63] transition-colors" />
-            </Card>
-          </a>
-        ))}
       </div>
     </div>
   </section>
@@ -776,7 +770,6 @@ function Home() {
       <FeaturedProjects />
       <Hackathons />
       <Education />
-      <HackathonCertifications />
       <Certifications />
       <VolunteerExperience />
       <Footer />
